@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIT Blog: Editor</title>
+    <link rel="stylesheet" href="./css/editor.css" />
+    <!-- <link rel="stylesheet" href="./css/home.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="banner">
+      <input type="file" accept="image/*" id="banner-upload" hidden />
+      <label for="banner-upload" class="banner-upload-btn"
+        ><img src="./uploads/upload.png" alt="upload banner photo"
+      /></label>
+    </div>
+
+    <div class="blog">
+      <textarea
+        type="text"
+        class="title"
+        placeholder="Blog title..."
+      ></textarea>
+      <textarea
+        type="text"
+        class="article"
+        placeholder="start writing..."
+      ></textarea>
+    </div>
+
+    <div class="blog-options">
+      <button class="btn dark publish-btn">publish</button>
+      <input type="file" accept="image/*" id="image-upload" hidden />
+      <label for="image-upload" class="btn grey upload-btn">Upload Image</label>
+    </div>
+    <script src="./js/editor.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.10.1/firebase-firestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.10.1/firebase-app.js"></script>
+    <script src="./js/firebase.js"></script>
+  </body>
+</html>
